@@ -1,0 +1,844 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Poppins';
+	background: #FDFEFE;
+	margin: 0px;
+}
+
+ /* tama;o futuro para contenedor */
+/* .contenedor-width{
+	width: 1200px;
+	align-content: center; */
+
+a{
+	text-decoration: none;
+}
+
+.titulos-home{
+	font-family: 'Poppins';
+	font-size: 1.2em;
+	letter-spacing: 0.20em;
+	text-transform: uppercase;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+.titulos-home h2{
+	margin: 0;
+	padding: 8px;
+	border-top: solid 5px #ffac81;
+}
+
+.titulos-home h2 a{
+	color: #333333;
+	border-top: solid 5px #7cffcb;
+	transform: scale(2);
+}
+
+
+.contenedor-principal{
+  margin: 3px;
+  height: 90vh;
+  display: grid;
+  margin: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+/*clases para diferenciar al inicio*/
+.contenedor-principal{
+  /* ojo borde para diferenciar, no es margen*/
+	background: #f7f7f7;
+}
+
+.contenedor-principal header{
+  border: 1px outline #FFFF;
+	background-color: #7cffcb;
+  background-image: linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
+	border-top: 3px solid #7cffcb;
+
+}
+
+.semicirculo-home{
+	background-color: #ffac81;
+  background-image: linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
+  border-bottom-left-radius: 35% 100%;
+  border-bottom-right-radius: 35% 100%;
+  grid-column: 1 / 11;
+  grid-row: 2 / 4;
+  border-top: 10px solid #ff7e67;
+  justify-content: center;
+  align-items: center
+}
+.borde-central{
+  grid-column: 1 / 11;
+  grid-row: 2 / 11;
+  border: 9px solid;
+  border-color: #ff7e67;
+	position: relative;
+}
+
+/* hijos del  contenedor en el home*/
+
+.intro-header{
+  grid-column: 2 / 13;
+  grid-row: 1 / span 2;
+}
+.imagen-central{
+  grid-column: 4 / 13;
+  grid-row: 3 / span 10;
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.imagen-central{
+		background-image: url(../imagenes/imagenes-index/cintillo/Marilyn-Monroe.png);
+		background-size: cover;
+		background-position-x: left;
+		background-position-y: left;
+		background-attachment: initial;
+}
+
+.transp-imagen{
+  grid-column: 4 / 13;
+  grid-row: 3 / span 4;
+  z-index: 10;
+  background: #ff7e67;
+	opacity: 0.40;
+}
+
+.titulo-principal{
+  grid-column: 1 / span 5;
+  grid-row: 11 / 13;
+  z-index: 20;
+  background: #f7f7f7;
+  margin-left: 6em;
+}
+ .titulo-principal h1{
+   font-family: 'Domine';
+   font-size: 2em;
+   color: #333333;
+   text-align: center;
+   text-transform: capitalize;
+   padding: 1px;
+   margin: 2px 2px 2px 3px;
+	 letter-spacing: 6px;
+ }
+
+.titulo-principal p{
+  font-family: 'Domine';
+  font-size: 0.8em;
+  color: #333333;
+  text-align: left;
+  margin: 0px 2px 0px 3px;
+}
+
+ .cuadro-lista-menu{
+  grid-column: 2 / 4;
+  grid-row: 1 / span 10;
+  display: grid;
+  grid-template-columns: repeat(10 , 1fr);
+  grid-template-rows: repeat(10 , 1fr);
+  justify-content: center;
+	/* z-index: 6; */
+
+}
+
+.menu-home{
+  grid-column: 2 / 4;
+  grid-row: 2 / 11;
+  display: grid;
+  /*inside*/
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 2px;
+	transform: rotate(-45deg) translate(-1.5em, -0.5em);
+}
+    /*hijos de la grilla hijo lista menú*/
+
+    .lista-menu{
+      grid-column: 1 / 2;
+      grid-row: 5 / 6;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lista-menu ol{
+      padding: 0;
+      list-style: none;
+    }
+
+    .lista-menu ol li{
+      font-family: 'Domine';
+      font-size: 15px;
+      text-align: left;
+      padding: 2px;
+      border-bottom: solid #42b883 2px;
+      text-transform: uppercase;
+			letter-spacing: 1px;
+    }
+
+    .lista-menu ol li a{
+      text-decoration: none;
+      color: #ff7e67;
+      text-shadow: 1px 0px #42b883;
+    }
+
+     .menu-estilo{
+       grid-column: 2/ 3;
+       grid-row: 5 / 6;
+       justify-content: flex-start;
+       align-self: flex-start;
+       border-left: solid #42b883 4px;
+      }
+
+			 .menu-estilo a{
+			 text-decoration: none;
+       padding: 3px;
+       writing-mode: vertical-lr;
+       color: #ff7e67;
+       align-items: center;
+       font-size: 22px;
+       font-family: 'Domine';
+       letter-spacing: 11px;
+			 /* font-style: italic; */
+     }
+
+/*lista menu animación*/
+.lista-menu ol li:hover{
+	transform: translateX(3px);
+	font-size: 1.01em;
+	border-bottom: solid #42b883 4px;
+	transition: 0.01s;
+}
+.lista-menu ol li a:hover{
+	color:#42b883;
+}
+
+.menu-estilo a:hover{
+	text-transform: uppercase;
+	color:#42b883;
+	transform: scale(1.1);
+	transition: 0.01s;
+}
+
+
+/*Estilos seccion 2 Celebrities homepage*/
+.tit-tend-estyle{
+	font-family: 'Domine';
+	letter-spacing: 3px;
+	font-size: 1.01em;
+	font-weight: bold;
+	text-transform: capitalize;
+	color:#333333;
+	text-align: left;
+	padding: 0.5em;
+	/* border-left: 0.3em solid #ffac81; */
+	background: rgba(124, 255, 203, 0.7);
+	border-right: 2px solid #42b883;
+	margin-bottom: 10px;
+}
+
+.borde-imagen{
+ border: 2px solid #ff7e67;
+}
+
+
+.contenedor-celeb-home{
+	display: grid;
+	height: 70vh;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+	background: #f7f7f7;
+	margin: 10px;
+	grid-gap: 3px;
+}
+	.contenedor-celeb-home img{
+		width: 100%;
+		height:100%;
+		display: block;
+		margin:0;
+		object-fit: cover;
+	}
+
+/* colores para fase de dise;o*/
+/* .contenedor-celeb-home div{
+	background-color: rgba(255, 0, 0, 0.5);
+} */
+
+/*contenedores de las sección celebrities en el home*/
+	.celeb-name-home{
+		grid-column: 1 / 13;
+		grid-row: 1 / span 2;
+
+	}
+	.celebrities-1{
+		grid-column: 1 / 4;
+		grid-row: 3 / 12;
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-columns: repeat(10, 1fr);
+		grid-gap: 2px;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+
+			.image-1-left{
+				grid-column: 2 / 10;
+				grid-row: 2 / 9;
+				background: rgba(0,0,0,0.15);
+			}
+
+			.image-1-left-tit{
+				grid-column: 3 / 10;
+				grid-row: 7 / 9;
+				justify-self: stretch;
+				align-self: start;
+				text-align: left;
+				z-index: 10;
+			}
+
+	.celebrities-2{
+		grid-column: 4 / 7;
+		grid-row: 4 / 13;
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-columns: repeat(10, 1fr);
+		grid-gap: 2px;
+		position: relative;
+	}
+			.image-2-left{
+				grid-column: 1 / 11;
+				grid-row: 2 / 10;
+				background: rgba(0,0,0,0.15);
+			}
+			.image-2-left-tit{
+				grid-column: 2 / 11;
+				grid-row: 8 / 10;
+				z-index: 10;
+			}
+
+	.celebrities-3{
+		grid-column: 7 / 10;
+		grid-row: 3 / 12;
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-columns: repeat(10, 1fr);
+		grid-gap: 2px;
+		position: relative;
+	}
+
+			.image-3-left{
+				grid-column: 2 / 10;
+				grid-row: 2 / 9;
+				background: rgba(0,0,0,0.15);
+			}
+			.image-3-left-tit{
+				grid-column: 3 / 10;
+				grid-row: 8 / 9	;
+				z-index: 10;
+			}
+
+	.cuadro-tendencias{
+		grid-column: 10 / 13;
+		grid-row: 3 / 13;
+		display: grid;
+		grid-gap: 3px;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: repeat(5, 1fr);
+		/* background-color: rgba(255, 0, 0, 0.5); */
+		font-size: 5px;
+	}
+
+        /* titulo del cuadro tendencia */
+				.tit-tend-0{
+				grid-column: 1 / 3;
+				grid-row: 1 / 2;
+				}
+        /* bloques de imagenes y titulos del cuadro de tendencia */
+				.tend-home-img-1{
+					grid-column: 1/ 2;
+					grid-row: 2 / 3;
+				}
+
+				.tit-tend-1{
+					grid-column: 2/ 3;
+					grid-row: 2 / 3;
+				}
+
+				.tend-home-img-2{
+					grid-column: 1/ 2;
+					grid-row: 3 / 4;
+				}
+
+				.tit-tend-2{
+					grid-column: 2/ 3;
+					grid-row: 3 / 4;
+				}
+
+				  .tend-home-img-3{
+					grid-column: 1/ 2;
+					grid-row: 4 / 5;
+				}
+
+				.tit-tend-3{
+					grid-column: 2/ 3;
+					grid-row: 4 / 5;
+				}
+
+				.tend-home-img-4{
+					grid-column: 1/ 2;
+					grid-row: 5 / 6;
+				}
+
+				.tit-tend-4{
+					grid-column: 2/ 3;
+					grid-row: 5 / 6;
+				}
+
+.color-fondo{
+	grid-column: 2 / 10;
+	grid-row: 2 / 9;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 126, 103, 0.4);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.color-fondo:hover{
+	opacity: 1;
+	transform: scale(1.02);
+	transition: auto;
+}
+
+.color-fondo-2{
+	grid-column: 1 / 11;
+	grid-row: 2 / 10;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 126, 103, 0.4);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+	.color-fondo-2:hover{
+		opacity: 1;
+		transform: scale(1.02);
+		transition: auto;
+	}
+
+.color-fondo-3{
+	grid-column: 2 / 10;
+	grid-row: 2 / 9;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 126, 103, 0.4);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.color-fondo-3:hover{
+	opacity: 1;
+	transform: scale(1.02);
+	transition: auto;
+}
+
+
+/*veamos*/
+
+/*seccion con Flexbox de En Tendencia*/
+
+/* clases de ayuda*/
+.center-content{
+	justify-content: center;
+	align-items: center;
+}
+
+.centrar-texto{
+	text-align: center;
+}
+
+.padre-en-tendencia{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	background: rgba(0,0,0,0.05);
+	padding: 10px;
+	margin: 15px;
+	box-sizing: border-box;
+}
+ 		.en-tedencia-up{
+			background-color: rgba(255, 126, 103, 0.4);
+			/*Permitir que esta sección se vuelvan columnas internas*/
+			display: flex;
+			flex-flow: column nowrap;
+		}
+
+				.en-tendencia-1{
+					display: flex;
+					flex-flow: column nowrap;
+					font-size: 10px;
+					color: #000;
+					justify-content: center;
+					align-items: center;
+					height: 90vh;
+				}
+				.en-tendencia-1 div{
+					margin: 1px;
+				}
+				/* Hijos de la tendencia 1*/
+						.hijo-tend-up-1{
+							flex: 1 1 5%;
+							align-self: center;
+							flex-wrap: nowrap;
+						}
+
+						.hijo-tend-up-1 h2{
+							margin: 0;
+							padding: 2px;
+						}
+
+						.hijo-tend-up-2{
+							flex: 3 1 90%;
+							align-self: stretch;
+							overflow: hidden;  /*excelente estrátegia para cubrir la imágen fuera de cover*/
+						}
+
+						.hijo-tend-up-2 img{
+							width: 100%;
+							height: 200%;
+							display: block;
+							margin: 0;
+							object-fit: cover
+						}
+
+						.hijo-tend-up-3{
+							flex: 1 1 10%;
+							align-self: center;
+							margin-bottom: 3px;
+							padding-top: 0;
+						}
+						.hijo-tend-up-4{
+							background: #fffa;
+							flex: 1 1 5%;
+							align-self: center;
+							padding: 15px;
+							margin-left: 0;
+							font-size: 1.4em;
+						}
+						.hijo-tend-up-5{
+							flex: 1 1 5%;
+							align-self: center;
+							margin: 1px;
+							padding: 3px;
+						}
+
+.autor{
+	font-family: "Domine";
+	font-size: 1.1em;
+	color: #f7f7f7;
+	padding: 0;
+	margin: 0;
+}
+
+/*Tendencia inferior de la sección estilo en el homepage*/
+		    .en-tendencia-down{
+					margin-top: 5px;
+					background-color: #ee8572;
+					flex: 1 1 auto;
+					height: 35vh;
+				}
+
+					.en-tendencia-2{
+						display: flex;
+						flex-flow: row nowrap;
+						height: 35vh;
+						justify-content: center;
+						align-items: stretch;
+					}
+						 	.en-tendencia-2 article{
+							background-color: #63b7af;
+							font-size: 10px;
+							color: #000;
+							margin-left: 4px;
+				    	}
+
+									.hijo-tend-down-6{
+										flex: 1 1 30%;
+										/*internamente quiero manipular los elementos con este flex*/
+										display: flex;
+										flex-flow: column nowrap;
+										justify-content: center;
+										align-items: center;
+										height: auto;
+									}
+
+									.hijo-tend-down-7{
+										flex: 1 1 15%;
+										display: flex;
+										flex-flow: column nowrap;
+										justify-content: center;
+										align-items: center;
+										height: auto;
+									}
+
+									.hijo-tend-down-8{
+										flex: 1 1 15%;
+									}
+
+									.hijo-tend-down-9{
+										flex: 1 1 20%;
+									}
+
+									.hijo-tend-down-10{
+										flex: 1 1 5%;
+									}
+
+ /* Clases de ayuda para los hijos*/
+
+ .margen-cajas{
+	 margin: 3px;
+	 background-color: #FFFF;
+ }
+
+/* Esta clase de ayuda permite saber el área en porcentje (%) que ocuparan los hijos del área Down de la sección
+En Tendencia - conocida como ten-down-in*/
+.flex-hijo-tend-down-in{
+	display: flex;
+	flex-flow: column nowrap;
+	/* trabajo con % para que tome toda el área de su padre que esta a 30% del total de su abuelo*/
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .15);
+	/* Es preferible crear una clase de ayuda que permita alinear los elementos de un flex
+	justify-content: center;
+	align-items: center*/
+}
+      .tend-down-6-in-1{
+			flex: 2 1 1;
+			width: 50%;
+			}
+
+			.tend-down-6-in-2{
+				flex: 2 1 20%;
+				align-self: stretch;
+			}
+
+/*hijos para la siguiente estructura de En Tendencia*/
+
+			.tend-down-7-in-1{
+				flex: 1 1 70%;
+				width: 80%;
+			}
+			.tend-down-7-in-2{
+				flex: 0 1 25%;
+				align-self: stretch;
+			}
+
+			.tend-down-8-in-1{
+				flex: 1 1 70%;
+				width: 80%;
+			}
+			.tend-down-8-in-2{
+				flex: 0 1 25%;
+				align-self: stretch;
+			}
+
+			.tend-down-9-in-1{
+				flex: 1 1 80%;
+				width: 80%;
+			}
+			.tend-down-9-in-2{
+				flex: 0 1 20%;
+				align-self: stretch;
+			}
+
+.centrar-imagen-caja{
+	overflow: hidden;
+	/* width: 100%;
+	height: 100%; */
+	display: block;
+	margin: 0;
+	object-fit: cover;
+}
+
+/* Responsive del index pagina*/
+/*Responsive para el header de la pagina*/
+@media (max-width:1024px){
+	.contenedor-principal{
+		min-height: 200px;
+		max-height: 40vh;
+	}
+		.contenedor-principal header{
+			background-color: #ff7e67;
+			background-image: linear-gradient(315deg, #ff7e67 10%, #7cffcb 98%);
+			border-top: none;
+		}
+		.intro-header{
+			grid-column: 1 / 13;
+		  grid-row: 1;
+			display: flex;
+			align-self: flex-end;
+			height: 8px;
+		}
+	  .borde-central, .semicirculo-home, .borde-central{
+			display: none;
+		}
+
+		.menu-home{
+			transform: none;
+			z-index: 50;
+			grid-column: 1 / 8;
+			grid-row: 2 / 5;
+			height: 100%;
+		}
+
+		.menu-home div a{
+			font-size: 1em;
+			padding: 1px;
+			color: #FFFF;
+		}
+
+		.menu-home div ol li a{
+			font-size: .86em;
+			color: #7cffcb;
+		}
+
+		.lista-menu ol li a:hover{
+			color: #ff7e67;
+		}
+
+
+		.transp-imagen{
+			grid-column: 1 / 13;
+			grid-row: 2 / 7;
+		}
+
+		.imagen-central{
+			grid-column: 1 / 13;
+			grid-row: 2 / 13;
+		}
+
+		.titulo-principal{
+			grid-column: 1 / 13;
+			grid-row: 11 / 13;
+			align-items: center;
+			justify-content: center;
+			margin: 0;
+			overflow: hidden;
+			height: auto;
+		}
+
+		.titulo-principal h1{
+			font-size: 1.3rem;
+		}
+
+		.titulo-principal p{
+			font-size: 0.65rem;
+			text-align: center;
+		}
+}
+
+/*Responsive seccion celebrities home*/
+@media (max-width:1024px){
+	.celeb-name-home h2 a{
+		font-size: 1.3rem;
+	}
+
+	.contenedor-celeb-home{
+		display: flex;
+		flex-flow: row wrap;
+		height: auto;
+	}
+
+	.cuadro-tendencias{
+		display: none;
+	}
+
+	.tit-tend-estyle{
+		margin-bottom: 8px;
+		padding: 0.5rem;
+		text-align: center;
+		font-size: 1em;
+	}
+
+
+ .celeb-name-home{
+ 		display: flex;
+ 		align-self: center;
+		flex: 1 1 10%;
+		/* align-self: center; */
+		justify-content: center;
+
+ 	}
+
+   .celebrities-1{
+		 flex: 20% 1 100%;
+		 height: 60vh;
+		 align-self: right;
+	 }
+       /* color fondo de celebrities 1, puede mejorar automáticamente con SAAS
+			 es una buena idea ahora que lo veo a detalle*/
+
+			/* .color-fondo{
+				grid-column: 1 / 10;
+			}
+      .imagen-1-left{
+				grid-column: 1 / 10;
+			}
+
+			.image-1-left-tit{
+				grid-column: 1/ 10;
+				grid-row: 7 / 9;
+			}
+
+			.celeb-name-home h2 a{
+				font-size: 0.8rem;
+			} */
+
+
+	 .celebrities-2{
+		 flex: 1 1 25%;
+	 }
+
+	 .celebrities-3{
+		 flex: 1 1 25%;
+	 }
+
+}
+
+@media (max-width:667px){
+	.celeb-name-home h2 a{
+		font-size: 0.8rem;
+	}
+
+  .tit-tend-estyle{
+		margin-bottom: 0px;
+		padding: 0.5rem;
+		text-align: center;
+		font-size: 0.60em;
+	}
+
+	.image-1-left-tit{
+		grid-column: 2 / 10;
+		grid-row: 8;
+	}
+
+	.image-2-left-tit{
+		grid-column: 1 / 11;
+		grid-row: 9;
+	}
+
+	.image-3-left-tit{
+		grid-column: 2 / 10;
+		grid-row: 8;
+	}
+}
